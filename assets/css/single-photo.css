@@ -1,4 +1,4 @@
-/* Partie en haut - Détail de la photo */
+/* Partie en haut le détail de la photo */
 .photo_detail {
     width: 100%;
     max-width: 1190px;
@@ -7,14 +7,6 @@
     font-family: 'Space Mono', monospace;
 }
 
-.photo_detail h1 {
-    font-style: italic;
-    font-weight: 400;
-    font-size: 66px;
-    line-height: 58px;
-    width: 80%;
-    padding: 40px 0;
-}
 
 .photo_detail h2 {
     font-weight: 400;
@@ -29,6 +21,15 @@
     letter-spacing: 2px;
     text-decoration: none;
 }
+.photo_detail h1 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 66px;
+    line-height: 58px;
+    width: 80%;
+    padding: 40px 0;
+}
+
 
 .photo_detail .btn:hover a {
     color: #fff;
@@ -188,10 +189,6 @@
         padding-bottom: 10px;
         width: 90%;
         border-bottom: 0px solid #000;
-    }
-
-    .container__photo {
-        /* padding: 0 40px; */
     }
 
     .photo__info--image {

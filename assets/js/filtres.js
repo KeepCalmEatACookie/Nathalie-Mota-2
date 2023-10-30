@@ -1,6 +1,6 @@
-// Script pour gérer les filtres d'affichage en page d'accueil (front-page)
+// Script pour gérer les filtres d'affichage en page d'accueil (partie: front-page)
 //
-console.log("Script filtres en ajax lancé !!!");
+console.log("notre script filtres en ajax est lancé !!!");
 
 /**
  * Variables récupérées / renvoyées
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("currentPage").value = 1;
 
-  // Gestion du déplacement des filtres horizontalement
+  // gestion des déplacements des filtres horizontals à traver la bibliothèque swiper 
   const swiper = new Swiper(".swiper-container", {
     freeMode: true,
     grabCursor: true,
@@ -60,13 +60,13 @@ document.addEventListener("DOMContentLoaded", function () {
   (function ($) {
     $(document).ready(function () {
       $(".option-filter").change(function (e) {
-        // Empêcher l'envoi classique du formulaire
+        // empêche l'envoi classique du formulaire
         e.preventDefault();
 
-        // Récupération du jeton de sécurité
+        // récupération du jeton de sécurité
         const nonce = $("#nonce").val();
 
-        // Récupération de l'adresse de la page	pour pointer Ajax
+        // récupération de l'adresse de la page	pour pointer Ajax
         const ajaxurl = $("#ajaxurl").val();
 
         if (document.getElementById("max_pages") !== null) {

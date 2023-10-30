@@ -4,6 +4,7 @@
  *
  *
  * @package nathalie-mota theme
+ * @author KeepCalmAndEatACookie
  */
 
 get_header();

@@ -19,7 +19,7 @@
 			<?php
 				// On insère le formulaire de demandes de renseignements
 				// get_field('reference')
-				$refPhoto = "";
+			$refPhoto = "";
 				if (get_field('reference')) {
 					$refPhoto = get_field('reference');
 				}; 
@@ -27,4 +27,4 @@
 				?>
 		</div>	
 	</div>
-</div>
+</div>	

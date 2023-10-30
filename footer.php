@@ -4,6 +4,7 @@
  *
  * @package WordPress
  * @subpackage nathalie-mota
+ * @author KeepCalmAndEatACookie
  */
 ?>
 	<footer id="footer">

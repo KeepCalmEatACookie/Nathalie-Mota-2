@@ -1,4 +1,4 @@
-/* lightbox pour l'image plein ecran*/
+/* lightbox pour l'image plein ecran comme sur la maquette*/
 .lightbox {
     position: fixed;
     top: 0;
@@ -48,14 +48,15 @@
     z-index: 12;
 }
 
-.lightbox__prev {
-    background: url("../img/prev_white.svg") center center / 100% 100% no-repeat;
-    left: 20px;
-}
 
 .lightbox__next {
     background: url("../img/next_white.svg") center center / 100% 100% no-repeat;
     right: 20px;
+}
+
+.lightbox__prev {
+    background: url("../img/prev_white.svg") center center / 100% 100% no-repeat;
+    left: 20px;
 }
 
 .lightbox .lightbox__container {
@@ -123,13 +124,14 @@ max-width: 100%;
     width: 80%;   
 }
 
-/* Gestion d'une image d'attente de chargement */
+/* Gestion d'une image d'attente de chargement l'effet loader */
 .lightbox__loader {
     width: 38px;
     height: 38px;
-    opacity: .5;
+    opacity: 0.5;
     background: url("../img/loader.svg") center center no-repeat;
 }
+
 
 
 /*  **********************************  */

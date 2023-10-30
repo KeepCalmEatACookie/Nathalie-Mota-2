@@ -5,6 +5,7 @@
  *
  * @package WordPress
  * @subpackage nathalie-mota theme
+ * @author KeepCalmAndEatACookie 
  */
 
 

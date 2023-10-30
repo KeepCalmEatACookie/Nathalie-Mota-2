@@ -6,6 +6,7 @@
  *
  * @package WordPress
  * @subpackage nathalie-mota theme
+ * @author KeepCalmAndEatACookie
  */
 
 get_header();

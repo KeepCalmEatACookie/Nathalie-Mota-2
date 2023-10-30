@@ -1,9 +1,10 @@
 <?php
 /**
- * The front-page : ACCUEIL 
+ * The front-page : page d'accueil 
  *
  * @package WordPress
  * @subpackage nathalie-mota theme
+ * @author KeepCalmAndEatACookie
  */
 
     get_header();
