@@ -1,5 +1,5 @@
 <?php
-// Pour les versions antérieures à WordPress 5.2
+/*Pour les anciennes versions*/
 if ( ! function_exists( 'wp_body_open' ) ) {
     function wp_body_open() {
             do_action( 'wp_body_open' );
@@ -15,12 +15,10 @@ function nathalie_mota_theme_enqueue() {
     wp_enqueue_style( 'nathalie-mota-single-photo-style', get_stylesheet_directory_uri() . '/assets/css/single-photo.css', filemtime(get_stylesheet_directory() . '/assets/css/single-photo.css'));     
     wp_enqueue_style( 'nathalie-mota-lightbox-style', get_stylesheet_directory_uri() . '/assets/css/lightbox.css', array(), filemtime(get_stylesheet_directory() . '/assets/css/lightbox.css') ); 
     
-    // swiper-style
+    // chargement du swiper-style
     if (is_front_page()) {
-        // wp_enqueue_style( 'swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@11.0.3/swiper-bundle.min.css' );
         wp_enqueue_style( 'swiper-style', get_stylesheet_directory_uri() . '/assets/css/swiper-bundle.min.css' );    
         wp_enqueue_script( 'swiper-element-bundle.min', 'https://cdn.jsdelivr.net/npm/swiper@11.0.3/swiper-bundle.min.js', array(), '9.2.0', true );
-        // wp_enqueue_script( 'swiper-element-bundle.min', get_theme_file_uri( '/assets/js/swiper-bundle.min.js', array(), '9.2.0', true));
     }; 
  
     // Chargement des script JS personnalisés
