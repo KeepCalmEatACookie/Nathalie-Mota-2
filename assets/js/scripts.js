@@ -1,14 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // console.log("Script principal lancé !!!");
-
+  // console.log("lancement du script !!!");
+  // Récupération des variables de PHP
   const contactBtn = document.querySelectorAll(".contact");
   const popupOverlay = document.querySelector(".popup-overlay");
 
   // Gestion de la pagination des photos
   (function ($) {
     $(document).ready(function () {
-      // Gestion de la fermeture et de l'ouverture du menu
-      // dans une modale pour la version mobile
+      // gestion de la fermeture et de l'ouverture du menu dans une modale pour la version mobile
       $(".btn-modal").click(function (e) {
         $(".modal__content").toggleClass("animate-modal");
         $(".modal__content").toggleClass("open");

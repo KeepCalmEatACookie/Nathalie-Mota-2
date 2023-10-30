@@ -18,7 +18,7 @@
 		</aside>
 	</footer>
 	
-	<!-- Lance la popup contact -->
+	<!-- Lancement de la popup contact -->
 	<?php 
         get_template_part ( 'template-parts/modal/contact'); 	
     ?>

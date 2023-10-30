@@ -70,7 +70,8 @@ function nathalie_mota_load() {
     if ($paged === 1) :
     ?>
     <form>  
-      <!-- Mise à disposition de JS du tableau contenant toutes les données de la requette et le nombre -->                 
+      <!-- Mise à disposition de JS du tableau contenant toutes les données de la requette et le nombre -->  
+      <!-- de pages max pour la pagination -->               
       <input type="hidden" name="total_posts" id="total_posts" value="<?php print_r( $total_posts); ?>">     
       <input type='hidden' name='max_pages' id='max_pages' value='<?php echo $max_pages; ?>'>
       <input type="hidden" name="nb_total_posts" id="nb_total_posts" value="<?php  echo $nb_total_posts; ?>">
@@ -79,7 +80,7 @@ function nathalie_mota_load() {
   
     <?php 
     endif;
-
+    // Boucle de récupération des données
     if($query_more->have_posts()) {
       while($query_more->have_posts()) : $query_more->the_post();
         $response .= get_template_part('template-parts/post/publication');
@@ -95,9 +96,8 @@ function nathalie_mota_load() {
   add_action('wp_ajax_nopriv_nathalie_mota_load', 'nathalie_mota_load');
 
 
-/**
-*  Récupération des données de de la photo pour la lightbox
-*/ 
+// Génération de l'affichage des photos pour la lightbox
+// Récupération des données pour le filtre et on les nettoie
 function nathalie_mota_lightbox() {
   if( 
 		! isset( $_REQUEST['nonce'] ) or 
@@ -134,7 +134,7 @@ if($query_lightbox->have_posts()) {
   $response = '';
 
 }
-
+  // On renvoie la réponse au format JSON
 wp_reset_postdata();
 exit;
  }

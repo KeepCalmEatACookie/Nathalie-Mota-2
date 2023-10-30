@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Supression du début "Array (" et de la fin ")" pour n'avoir que les données du tableau d'origine
     total_posts = total_posts.slice(8, total_posts.length - 3);
   }
-
+    // Récupération du nombre total de photos
   let nb_total_posts = 1;
   if (document.getElementById("nb_total_posts") !== null) {
     nb_total_posts = document.getElementById("nb_total_posts").value;

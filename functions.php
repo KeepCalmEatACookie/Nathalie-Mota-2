@@ -112,15 +112,13 @@ function nathalie_mota_widgets(){
  add_action('widgets_init', 'nathalie_mota_widgets'); 
 
 
- /**
- * Shortcode pour ajouter un bouton contact
- */
+// Ajout d'un shortcode pour le bouton de contact
 function contact_btn($string) {
 
-	/** Code du bouton */
+	// On crée le code HTML
 	$string .= '<a href="#" id="contact_btn" class="contact">Contact</a>';
 
-	/** On retourne le code  */
+    // On retourne le code HTML
 	return $string;
 }
 
@@ -145,10 +143,9 @@ function my_acf_load_value( $variable,  $field ) {
 
 
 /**
- * Ajout d'un filtre pour les requettes Query
- */
-/* Montre les CPT dans les pages d'archives (TAG & Category)
-*/
+    * Ajout d'un CPT (Custom Post Type) pour les photos
+    */
+//Montre les CPT dans les pages d'archives (TAG & Category)
 function add_custom_types_to_tax( $query ) {
     echo(is_category());
     echo(is_tag());
@@ -165,6 +162,7 @@ add_filter( 'pre_get_posts', 'add_custom_types_to_tax' );
 // Partie pour gerer le padding de l'affichage des photos  
 include get_template_directory() . '/includes/ajax.php';
 
+// fonction pour afficher les menus dans le header 
 function menu_nav() {
     $menu2 = wp_nav_menu(array('theme_location' => 'main'));
     $menu3 = wp_nav_menu(array('menu' => 'header'));

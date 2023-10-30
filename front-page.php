@@ -32,6 +32,7 @@
         $term = get_queried_object();
         $term_id  = my_acf_load_value('ID', $term);
 
+        // Récupération des données pour le filtre et on les nettoie
         // $categorie_id  =  get_post_meta( get_the_ID(), 'categorie-acf', true );
         // $format_id  =  get_post_meta( get_the_ID(), 'format-acf', true );
         // $categorie_name  = my_acf_load_value('name', get_field('categorie-acf'));
@@ -57,7 +58,8 @@
             )
             ),
             'nopaging' => false,
-            );            
+            ); 
+
             //On crée ensuite une instance de requête WP_Query basée sur les critères placés dans la variables $args
             $query = new WP_Query( $custom_args ); 
             $max_pages = $query->max_num_pages;
@@ -84,6 +86,7 @@
                         endwhile; 
                     ?>
                 </article>
+                <!-- Chargement de la lightbox -->
                 <div class="lightbox hidden" id="lightbox">    
                     <button class="lightbox__close" title="Refermer cet agrandissement">Fermer</button>
                     <div class="lightbox__container">

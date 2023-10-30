@@ -46,6 +46,7 @@
 }
 
 /* Position des 2 bannières pour le titre first et last*/
+
 .popup-title:first-child {
     background-position-x: left -48%;
 }

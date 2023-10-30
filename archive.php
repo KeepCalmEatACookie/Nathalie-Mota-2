@@ -44,9 +44,6 @@ get_header();
         <p>Aucun résultat</p>
       <?php endif; ?>
       </section>
-
-      <!-- <aside id="sidebar">
-      </aside> -->
   </div>
 
 <?php get_footer(); ?>

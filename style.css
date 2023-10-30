@@ -43,6 +43,7 @@ ul li {
     display: flex;
     flex-direction: column;
 }
+/*Header et footer */
 
 #header,
 #footer {
@@ -110,6 +111,19 @@ ul li {
     padding: 0 20px; 
 }
 
+/* Navigation */
+/*#navigation {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    max-width: 1200px;
+    margin: auto;
+    z-index: 30;
+}*/
+
 #navigation {
     display: flex;
     justify-content: space-between;
@@ -126,6 +140,7 @@ ul li {
 #navigation .menu-main-container a {
     padding: 0;
 }
+
 /* Menu mobile */
 .btn-modal {
     opacity: 1;
@@ -157,6 +172,7 @@ ul li {
   }
   
   /* Création du bouton pour fermer */
+
 #modal__burger:hover .line:nth-child(2),
 .btn-modal.close .line:nth-child(2) {
     opacity: 0;
@@ -170,6 +186,7 @@ ul li {
     transform: rotate(-45deg) translate3d(8px, -6px, 0);
   }
 
+/* Modal */
 .modal__content {
     position: absolute;
     right: 0;
@@ -203,8 +220,7 @@ ul li {
 
 #modal__content .menu-main-container li {   
      flex-direction: column;
-    justify-content: space-around;    
-    /* padding: 35px 20px 25px; */
+    justify-content: space-around; 
 }
 #modal__content .menu-main-container li a {   
     height: 80px;
@@ -219,8 +235,7 @@ ul li {
     opacity: 1;
     animation: move-down 2s 300ms both;
 }
-
-/* Pour faire apparaitre la moadle en descendant et avec agmentatation de l'opacité */
+ /* Animation */
 @keyframes move-down {
     0% {
       transform: translateY(-400px);
@@ -232,17 +247,18 @@ ul li {
     }
   }
 
-
-#footer ul li {
-    padding: 0 40px; 
-}
-
 input[type="text"] {
     border-radius: 4px; 
     border: none; 
     padding: 10px; 
     border: 1px solid #000000;
 }
+
+#footer ul li {
+    padding: 0 40px; 
+}
+
+/* Hero */
 
 button, 
 input[type="submit"] {
@@ -255,7 +271,6 @@ input[type="submit"] {
 
 #wrap,
 #front-page {
-    /* display: flex;  */
     margin: 0 auto 40px;
 }
 
@@ -337,20 +352,6 @@ input[type="submit"] {
     margin: auto;
 }
 
-.btn a,
-.btn__contact-form-7 .wpcf7-submit {
-    position: relative;
-    top: 0;
-    /* display: inline-block; */
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    width: 100%;
-    height: auto;
-    transition: .25s ease-in;
-    transition-delay: .1s;
-}
-
 .btn::before,
 .btn__contact-form-7::before {
     content: "";
@@ -364,15 +365,30 @@ input[type="submit"] {
     transform: translate(-100%,0%);
     transition: .36s cubic-bezier(0.4, 0.0, 1, 1);
 }
-.btn:hover::before,
-.btn__contact-form-7:hover::before {
-    transform: translate(0%,0%);
+
+/*bouton contact form 7*/ 
+
+.btn a,
+.btn__contact-form-7 .wpcf7-submit {
+    position: relative;
+    top: 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    height: auto;
+    transition: .25s ease-in;
+    transition-delay: .1s;
 }
 
 .btn:hover a,
 .btn__contact-form-7:hover .wpcf7-submit {
     color:#ffffff;
     font-weight: 700;
+}
+.btn:hover::before,
+.btn__contact-form-7:hover::before {
+    transform: translate(0%,0%);
 }
 
 
@@ -416,7 +432,6 @@ input[type="submit"] {
 
 .hero-area img {    
     margin: auto;
-    /* object-fit: contain; */
     object-fit: cover;
     object-position: 50% 50%;
     min-width: 100%;
@@ -519,8 +534,6 @@ form {
 
 /* On ajoute une flèche personnalisée */
 .filter-area .dashicons {  
-    /* width: 9px; */
-    /* height: 7px;   */
     position: absolute;
     display: inline-block;
     top: 32px;
@@ -545,7 +558,6 @@ form {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto 20px;
-    /* gap: 20px; */
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;

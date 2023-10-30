@@ -11,8 +11,9 @@
   get_header();
 ?>
 
-<!-- Bien souvent la page d'accueil du blog affiche de la même manière les informations que les pages d’archives du blog  -->
-<!-- Comme ça toutes les pages d’archives du blog auront le même et unique template -->
+<!--contenu utilisé pour la page archive afin de ne pas dupliquer le code -->
+<!--la page archive est utilisée pour la page d'accueil et la page blog -->
+
 <?php get_template_part( 'archive' ); ?>
 
 <?php get_footer(); ?>

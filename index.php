@@ -15,7 +15,7 @@ get_header();
       <section id="content">
         <h1>Nathalie Mota</h1>
         <p>Photographe professionnelle dans l’événementiel</p>
-        <!-- Vérification s'il existe au moins 1 article -->
+        <!-- Vérification s'il y a au moins 1 article -->
       <?php if(have_posts()) : ?>
         <div id="loop">
             <?php while(have_posts()) : the_post(); ?>

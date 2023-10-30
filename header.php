@@ -21,7 +21,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-	<!-- Récupération sur Fontawesome des icones dont on aura besoin -->
+	<!-- Récupération sur Fontawesome des icones dont on aura besoin dans notre compte fontawesome-->
 	<script src="https://kit.fontawesome.com/8b4f3289a2.js" crossorigin="anonymous"></script>
 	<?php wp_head(); ?>
 </head>
@@ -38,13 +38,14 @@
 			<?php 
 					// Affichage du menu main déclaré dans functions.php
 					wp_nav_menu(array('theme_location' => 'main')); 
-					?>	
+					?>
+				<!--Ajout du bouton pour la version mobile-->	
 				<button id="modal__burger" class="btn-modal" aria-label="Menu pour la version portable">
                     <span class="line"></span>
                     <span class="line"></span>
                     <span class="line"></span>
                 </button>
-				
+				<!--Ajout du menu pour la version mobile-->
                 <div id="modal__content" class="modal__content">           
 					<?php 				
 					wp_nav_menu(array('theme_location' => 'main')); 

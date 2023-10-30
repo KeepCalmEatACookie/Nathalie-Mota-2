@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Récupération de l'adresse de la page	pour pointer Ajax
         const ajaxurl = $("#ajaxurl").val();
-
+        // Récupération de la page affichée au moment du click
         if (document.getElementById("currentPage") !== null) {
           currentPage = document.getElementById("currentPage").value;
         }
@@ -49,13 +49,13 @@ document.addEventListener("DOMContentLoaded", function () {
         // currentPage + 1, pour pouvoir charger la page suivante
         currentPage++;
         document.getElementById("currentPage").value = currentPage;
-
+        // Si on est à la dernière page, on cache le bouton "Charger plus"
         if (currentPage >= max_pages) {
           $("#load-more").addClass("hidden");
         } else {
           $("#load-more").removeClass("hidden");
         }
-
+        // Si on est à la première page, on cache le bouton "Précédent"
         $.ajax({
           type: "POST",
           url: ajaxurl,

@@ -4,8 +4,8 @@
   echo ('search.php');
 ?>
 
-<!-- bien souvent les résultats sont affichés de la même manière que le blog -->
-<!-- Comme ça toutes les pages recherches auront le même et unique template que le blog -->
+<!--contenu utilisé pour la page archive afin de ne pas dupliquer le code -->
+<!--la page archive est utilisée pour la page d'accueil et la page blog -->
 <?php get_template_part( 'archive' ); ?>
 
 <?php get_footer(); ?>
