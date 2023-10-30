@@ -54,34 +54,32 @@ function scripts_modal() {
 // Ajouter la prise en charge des images mises en avant
 add_theme_support( 'post-thumbnails' );
 
-// permet de définir la taille des images mises en avant 
-// set_post_thumbnail_size(largeur, hauteur max, true = on adapte l'image aux dimensions)
+// permet de définir la taille des images mises en avant set_post_thumbnail_size(largeur, hauteur max, true = on adapte l'image aux dimensions)
 set_post_thumbnail_size( 600, 0, false );
 
-// Définir d'autres tailles d'images :  
-//      'thumbnail': 150 x 150 hard cropped 
-//      'medium' : 300 x 300 max height 300px
-//      'medium_large' : resolution (768 x 0 infinite height)
-//      'large' : 1024 x 1024 max height 1024px
-//      'full' : original size uploaded
+/* Définision des différentes tailles d'images :  
+      'thumbnail': 150 x 150 hard cropped 
+     'medium' : 300 x 300 max height 300px
+     'medium_large' : resolution (768 x 0 infinite height)
+     'large' : 1024 x 1024 max height 1024px
+    'full' : original size uploaded
+*/
 add_image_size( 'hero', 1450, 960, true );
 add_image_size( 'desktop-home', 600, 520, true );
 add_image_size( 'lightbox', 1300, 900, true );
 
 // Ajouter automatiquement le titre du site dans l'en-tête du site
+
 add_theme_support( 'title-tag' );
 
-// créer un lien pour la gestion des menus dans l'administration
-// et activation d'un menu pour le header et d'un menu pour le footer
-// Visibles ensuite dans Apparence / Menus (after_setup_theme)
+// créer un lien pour la gestion des menus dans l'administration et activation d'un menu pour le header et d'un menu pour le footer, ils sont visibles ensuite dans Apparence / Menus (after_setup_theme)
 function register_my_menu(){
     register_nav_menu('main', "Menu principal");
     register_nav_menu('footer', "Menu pied de page");
  }
  add_action('after_setup_theme', 'register_my_menu');
 
-// créer un pour la gestion des widgets dans l'administration et l'activation des sidebars
-// Visibles ensuite dans Apparence / Widgets (widgets_init)
+// créer un pour la gestion des widgets dans l'administration et l'activation des sidebars ils sont visibles ensuite dans Apparence / Widgets (widgets_init)
 function nathalie_mota_widgets(){
     register_sidebar(
         array(
@@ -124,9 +122,7 @@ function contact_btn($string) {
 add_shortcode('contact', 'contact_btn');
 
 
-// Récupération de la valeur d'un champs personnalisé ACF
-// $variable = nom de la variable dont on veut récupérer la valeur
-// $field = nom du champs personnalisés
+// Récupération de la valeur d'un champs personnalisé ACF $variable = nom de la variable dont on veut récupérer la valeur $field = nom du champs personnalisés
 function my_acf_load_value( $variable,  $field ) {
     // Initialisation de la valeur à retourner
     $return = "";
@@ -140,9 +136,7 @@ function my_acf_load_value( $variable,  $field ) {
 }
 
 
-/**
-    * Ajout d'un CPT (Custom Post Type) pour les photos
-    */
+/** Ajout d'un CPT (Custom Post Type) pour les photos */
 //Montre les CPT dans les pages d'archives (TAG & Category)
 function add_custom_types_to_tax( $query ) {
     echo(is_category());
