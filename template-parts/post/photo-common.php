@@ -56,7 +56,6 @@
                // Récupération du nom de la catégorie 
                $categorie  = my_acf_load_value('name', get_field('categorie-acf')); 
             ?>
-           
            <div class="news-info brightness">
                <?php if(has_post_thumbnail()) : ?>
                   <div class="thumbnail">
@@ -77,6 +76,7 @@
             </div>
        <?php endwhile; ?>
    </article>
+   <!-- Chargement de la lightbox -->
    <div class="lightbox hidden" id="lightbox">    
       <button class="lightbox__close" title="Refermer le plein écran">Fermer</button>
       <div class="lightbox__container">               

@@ -4,6 +4,8 @@
  *
  * @package WordPress
  * @subpackage nathalie-mota
+ * @since nathalie-mota 1.0
+ * @version 1.0
  * @author KeepCalmAndEatACookie
  */
 
